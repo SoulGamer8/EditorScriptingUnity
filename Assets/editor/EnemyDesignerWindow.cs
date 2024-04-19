@@ -197,6 +197,7 @@ public class GeneralSettings:EditorWindow{
                 if(!magePrefab.GetComponent<Mage>())
                     magePrefab.AddComponent<Mage>();
                 magePrefab.GetComponent<Mage>().data = EnemyDesignerWindow.MageInfo;
+                SpawnObject(magePrefab);
                 break;         
             case SettingsType.Warrior:
                   dataPath +="warrior/"+EnemyDesignerWindow.WarriorInfo.name+".asset";
@@ -214,21 +215,26 @@ public class GeneralSettings:EditorWindow{
                 warriorPrefab.GetComponent<Warrior>().data = EnemyDesignerWindow.WarriorInfo;
                 break;
             case SettingsType.Rogue:
-                  dataPath +="Rogue/"+EnemyDesignerWindow.RogueInfo.name+".asset";
+                  dataPath +="rogue/"+EnemyDesignerWindow.RogueInfo.name+".asset";
                 AssetDatabase.CreateAsset(EnemyDesignerWindow.RogueInfo, dataPath);
                 
-                newPrefabPath += "Rogue/" +EnemyDesignerWindow.RogueInfo.name+".prefab";
+                newPrefabPath += "rogue/" +EnemyDesignerWindow.RogueInfo.name+".prefab";
                 prefabPath = AssetDatabase.GetAssetPath(EnemyDesignerWindow.RogueInfo.prefab);
                 AssetDatabase.CopyAsset(prefabPath, newPrefabPath);
                 AssetDatabase.SaveAssets();
                 AssetDatabase.Refresh();
 
-                GameObject RoguePrefab = (GameObject)AssetDatabase.LoadAssetAtPath(newPrefabPath, typeof(GameObject));
-                if(!RoguePrefab.GetComponent<Rogue>())
-                    RoguePrefab.AddComponent<Rogue>();
-                RoguePrefab.GetComponent<Rogue>().data = EnemyDesignerWindow.RogueInfo;
+                GameObject roguePrefab = (GameObject)AssetDatabase.LoadAssetAtPath(newPrefabPath, typeof(GameObject));
+                if(!roguePrefab.GetComponent<Rogue>())
+                    roguePrefab.AddComponent<Rogue>();
+                roguePrefab.GetComponent<Rogue>().data = EnemyDesignerWindow.RogueInfo;
                 break;
         }
 
+    }
+
+    private void SpawnObject(GameObject gameObject){
+        Instantiate(gameObject, new Vector3(0, 0, 0), Quaternion.identity);
+        gameObject.name = EnemyDesignerWindow.MageInfo.name;
     }
 }

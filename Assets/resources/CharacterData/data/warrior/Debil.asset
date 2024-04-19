@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd7d06e4caeea645ab524910911ed12, type: 3}
+  m_Name: Debil
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8569494343129009493, guid: 9bccb2fb6706f754d9ff9605e7bbeec5, type: 3}
+  maxHealth: 100
+  maxEnerge: 20
+  critChance: 79
+  power: 20
+  name: Debil
+  classType: 0
+  weaponType: 0

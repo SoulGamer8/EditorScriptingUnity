@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6368563249602954996}
   - component: {fileID: 4695468379329683011}
   - component: {fileID: 5856550494994304991}
+  - component: {fileID: -4563280916878056375}
   m_Layer: 0
   m_Name: Debil
   m_TagString: Untagged
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-4563280916878056375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8569494343129009493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 707ad46231a7e8143b483752c2ede9ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 368185d57ac8e094cb518fefd6c4da00, type: 2}
